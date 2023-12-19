@@ -6,7 +6,7 @@ node {
     }
 
     stage('Build image') {
-        app = docker.build("gmorri211/coursework2:1.0")
+        app = docker.build("gmorri211/coursework2")
     }
 
     stage('Test image') {

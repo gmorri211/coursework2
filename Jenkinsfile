@@ -21,4 +21,7 @@ node {
             app.push("latest")
         }
     }
+    sshagent(['my-ssh-key']) {
+    	sh 'ssh ubuntu@ec2-54-84-78-59.compute-1.amazonaws.com && kubectl set image deployments/coursework2 coursework2=gmorri211/coursework2:latest'
+    }
 }
